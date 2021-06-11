@@ -1,4 +1,4 @@
-package com.droidkerala.theshard.ui.dashboard
+package com.droidkerala.theshard.presentation.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
