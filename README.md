@@ -13,4 +13,8 @@ Repository Pattern<br />
 AndroidX<br />
 Glide<br />
 Tmdb API (https://developers.themoviedb.org/3)<br />
-Jetpack Compose (coming soon)<br />
+
+Jetpack compose <br />
+
+Jetpack compose related changes you can see in branch compose-ui branch
+
