@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".presentation.ui.home.HomeFragment">
 
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerPopularMovies"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/popular_movie_item" />
+   <androidx.compose.ui.platform.ComposeView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/composeView"
+       />
 </androidx.constraintlayout.widget.ConstraintLayout>
