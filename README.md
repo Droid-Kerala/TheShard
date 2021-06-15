@@ -16,5 +16,5 @@ Tmdb API (https://developers.themoviedb.org/3)<br />
 
 Jetpack compose <br />
 
-Jetpack compose related changes you can see in branch compose-ui branch
+Jetpack compose related changes you can see in branch [compose-ui](https://github.com/Droid-Kerala/TheShard/blob/compose-ui/)branch
 
