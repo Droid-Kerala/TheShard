@@ -21,10 +21,13 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType.Companion.Text
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.droidkerala.theshard.R
 import com.droidkerala.theshard.data.Movie
 import com.droidkerala.theshard.databinding.FragmentHomeBinding
 import com.droidkerala.theshard.presentation.ui.adapters.PopularMoviesAdapter
@@ -36,7 +39,7 @@ import io.shrineapps.divinevibes.ui.theme.Red900
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), PopularMoviesAdapter.OnPopularMovieListener {
 
 
     private val lightColors = lightColors(
@@ -76,7 +79,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.recyclerPopularMovies.apply {
-            adapter = PopularMoviesAdapter(null)
+            adapter = PopularMoviesAdapter(this@HomeFragment)
         }
         // Todo Tmdb API here
         homeViewModel.getMovies("",1).observe(viewLifecycleOwner,{
@@ -105,5 +108,9 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onPopularMovieSelected(movie: Movie) {
+        findNavController().navigate(R.id.bottom_sheet_detail, bundleOf("id" to movie.id))
     }
 }

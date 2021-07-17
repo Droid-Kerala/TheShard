@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 10/01/2019
- * Author : DroidFreak
- */
-
 package com.droidkerala.theshard.utils.databinding
 
 import android.graphics.drawable.Drawable
@@ -34,7 +29,7 @@ fun setViewVisibility(view: ViewGroup, value: String?) {
 
 //Load image with progress
 @BindingAdapter("imageUrl", "progressbar")
-fun loadImage(imageView: ImageView, imageUrl: String?, ProgressBar: ProgressBar?) {
+fun loadImageWithProgress(imageView: ImageView, imageUrl: String?, ProgressBar: ProgressBar?) {
     Glide.with(imageView.context).load("https://image.tmdb.org/t/p/w185$imageUrl")
         .listener(object : RequestListener<Drawable> {
             override fun onLoadFailed(
@@ -57,6 +52,10 @@ fun loadImage(imageView: ImageView, imageUrl: String?, ProgressBar: ProgressBar?
                 return false
             }
         }).into(imageView)
+}
+@BindingAdapter("imageUrl")
+fun loadImage(imageView: ImageView, imageUrl: String?) {
+    Glide.with(imageView.context).load("https://image.tmdb.org/t/p/w185$imageUrl").into(imageView)
 }
 
 

@@ -22,4 +22,10 @@
         android:name="com.droidkerala.theshard.presentation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <dialog
+        android:id="@+id/bottom_sheet_detail"
+        android:name="com.droidkerala.theshard.presentation.ui.bottomsheet.MovieDetailBottomSheet"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragement_bottom_sheet_detail" />
 </navigation>
