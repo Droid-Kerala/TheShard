@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 10/01/2019
- * Author : DroidFreak
- */
-
 package com.droidkerala.theshard.data
 
 //data class for movie api response

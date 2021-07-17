@@ -1,6 +1,7 @@
 package com.droidkerala.theshard.presentation.ui.home
 
 import androidx.lifecycle.*
+import com.droidkerala.theshard.data.Movie
 import com.droidkerala.theshard.domain.MovieRepository
 import com.droidkerala.theshard.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -24,5 +25,9 @@ class HomeViewModel @Inject constructor(private val movieRepository : MovieRepos
         } catch (exception: Exception) {
             emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
         }
+    }
+
+    fun getMovieListById(id : String) : Movie? {
+        return  movieRepository.getMovieListById(id)
     }
 }

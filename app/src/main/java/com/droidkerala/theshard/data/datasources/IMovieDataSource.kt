@@ -5,8 +5,8 @@ import com.droidkerala.theshard.data.network.ApiService
 import retrofit2.http.Query
 import javax.inject.Inject
 
-class MovieDataSource @Inject constructor(private  val apiService: ApiService) : IMovieDataSource{
+interface IMovieDataSource  {
 
-    override suspend fun getMoviesList(apikey: String?, page: Int) = apiService.getMoviesList(apikey,page)
+    suspend fun getMoviesList(apikey: String?, page: Int) : MovieResponse
 
 }
