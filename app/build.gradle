@@ -44,6 +44,7 @@ android {
         kotlinCompilerVersion = "1.5.10"
         kotlinCompilerExtensionVersion = "1.0.0-beta08"
     }
+
 }
 
 dependencies {
@@ -85,22 +86,22 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
-    implementation("androidx.compose.ui:ui:1.0.0-beta08")
+    implementation("androidx.compose.ui:ui:1.0.0-rc02")
     // Tooling support (Previews, etc.)
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta08")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0-rc02")
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
-    implementation("androidx.compose.foundation:foundation:1.0.0-beta08")
+    implementation("androidx.compose.foundation:foundation:1.0.0-rc02")
     // Material Design
-    implementation("androidx.compose.material:material:1.0.0-beta08")
+    implementation("androidx.compose.material:material:1.0.0-rc02")
     // Material design icons
-    implementation("androidx.compose.material:material-icons-core:1.0.0-beta08")
-    implementation("androidx.compose.material:material-icons-extended:1.0.0-beta08")
+    implementation("androidx.compose.material:material-icons-core:1.0.0-rc02")
+    implementation("androidx.compose.material:material-icons-extended:1.0.0-rc02")
     // Integration with observables
-    implementation("androidx.compose.runtime:runtime-livedata:1.0.0-beta08")
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.0-rc02")
 
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
     kapt 'androidx.hilt:hilt-compiler:1.0.0'
-    implementation "com.google.accompanist:accompanist-coil:0.11.1"
+    implementation "com.google.accompanist:accompanist-coil:0.12.0"
 }
